@@ -16,9 +16,9 @@ export default function Home() {
   useEffect(() => {
     const handleScroll = (event: any) => {
       if (event.deltaY < 0 && searchBarRef.current) {
-        searchBarRef.current.scrollIntoView({ behavior: 'smooth' });
+        (searchBarRef.current as HTMLElement).scrollIntoView({ behavior: 'smooth' });
       } else if (event.deltaY > 0 && galleryRef.current) {
-        galleryRef.current.scrollIntoView({ behavior: 'smooth' });
+        (galleryRef.current as HTMLElement).scrollIntoView({ behavior: 'smooth' });
       }
     };
 
@@ -36,7 +36,7 @@ export default function Home() {
     }
 
     if (galleryRef.current) {
-      galleryRef.current.scrollIntoView({ behavior: 'smooth' });
+      (galleryRef.current as HTMLElement).scrollIntoView({ behavior: 'smooth' });
     }
 
     fetchImages(searchInput).then((images) => {

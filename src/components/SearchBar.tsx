@@ -1,23 +1,27 @@
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import React, { useState, ChangeEvent, FormEvent } from 'react';
+import React, { useState } from 'react';
 
-
-type props = {
-  searchHandler: (searchInput: string) => void;
+type Props = {
+  searchHandler: any;
 }
 
-const SearchBar: React.FC<props> = ({ searchHandler }: props) => {
+const SearchBar: React.FC<Props> = ({ searchHandler }) => {
+  const [searchInput, setSearchInput] = useState('');
 
-  let [searchInput, setSearchInput] = useState('');
   return (
     <div className="search-bar">
-      <input value={searchInput.substring(0, 1).toUpperCase() + searchInput.substring(1)} type="search" name="search" pattern=".*\S.*" required onChange={(e) => setSearchInput(e.target.value)} />
+      <input
+        value={searchInput}
+        type="search"
+        name="search"
+        pattern=".*\S.*"
+        required
+        onChange={(e) => setSearchInput(e.target.value)}
+      />
       <button className="search-btn" onClick={() => searchHandler(searchInput)}>
         <span>Search</span>
       </button>
     </div>
-
-
   );
 };
 
