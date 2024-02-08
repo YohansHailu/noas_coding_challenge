@@ -1,7 +1,7 @@
 import SearchBar from "@/components/SearchBar";
 import ImageGallery from "react-image-gallery";
 import { useRef, useState, useEffect } from "react";
-import { fetchAudio, fetchImages } from "./utils/api";
+import { fetchAudio, fetchImages } from "@/utils/api";
 import { AudioPlayer } from "@/components/AudioPlayer";
 
 
