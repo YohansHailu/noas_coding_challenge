@@ -6,6 +6,7 @@ import { AudioPlayer } from "@/components/AudioPlayer";
 import { LoadingPlaceHolder } from "@/components/LoadingPlaceHolder";
 
 
+
 export default function Home() {
 
   let [searchedImages, setSearchedImages] = useState<any[]>([]);
