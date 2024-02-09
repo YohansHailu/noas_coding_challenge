@@ -1,3 +1,4 @@
+import React from 'react';
 declare module 'react-loading' {
   const ReactLoading: React.FC<any>;
   export default ReactLoading;
