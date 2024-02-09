@@ -6,6 +6,13 @@ type Props = {
 }
 
 const SearchBar: React.FC<Props> = ({ searchHandler }) => {
+
+  function handleKeyDown(event: any) {
+    if (event.key === 'Enter') {
+      searchHandler(searchInput);
+    }
+  }
+
   const [searchInput, setSearchInput] = useState('');
 
   return (
@@ -17,6 +24,7 @@ const SearchBar: React.FC<Props> = ({ searchHandler }) => {
         pattern=".*\S.*"
         required
         onChange={(e) => setSearchInput(e.target.value)}
+        onKeyDown={handleKeyDown}
       />
       <button className="search-btn" onClick={() => searchHandler(searchInput)}>
         <span>Search</span>
