@@ -49,7 +49,7 @@ export default function Home() {
     }
 
     fetchImages(searchInput).then((images) => {
-      setSearchedImages(images.filter((image) => !image.displayLink.includes('facebook')).map((image) => {
+      setSearchedImages(images.map((image) => {
         return {
           original: image.link,
           thumbnail: image.link,
