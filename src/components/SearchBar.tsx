@@ -1,5 +1,6 @@
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import React, { useState } from 'react';
+import { useRef } from 'react';
 
 type Props = {
   searchHandler: any;
@@ -7,9 +8,11 @@ type Props = {
 
 const SearchBar: React.FC<Props> = ({ searchHandler }) => {
 
+  const inputRef = useRef<HTMLInputElement>(null);
   function handleKeyDown(event: any) {
     if (event.key === 'Enter') {
       searchHandler(searchInput);
+      inputRef.current?.blur();
     }
   }
 
@@ -18,6 +21,7 @@ const SearchBar: React.FC<Props> = ({ searchHandler }) => {
   return (
     <div className="search-bar">
       <input
+        ref={inputRef}
         value={searchInput}
         type="search"
         name="search"
