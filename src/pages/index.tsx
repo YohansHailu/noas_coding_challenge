@@ -68,7 +68,7 @@ export default function Home() {
       <div ref={searchBarRef} id="searchbar" style={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
         <SearchBar searchHandler={searchHandler} />
       </div>
-      <div ref={galleryRef} id="gallery" className="gallery" style={{ height: "100vh", width: "100vw", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
+      <div ref={galleryRef} id="gallery" className="gallery" style={{ height: "100vh", width: "100vw", display: "flex", alignItems: "center", justifyContent: "center" }}>
         <div style={{ width: "95vw", borderRadius: "10px", overflow: "clip", margin: "25vw" }}>
           {isAudioLoading ?
             <div style={{ display: "flex", justifyContent: "center" }}>
