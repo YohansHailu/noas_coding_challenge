@@ -78,7 +78,8 @@ export default function Home() {
             <div
               style={{
                 transition: "opacity 0.5s ease-in-out",
-                opacity: isAudioLoading ? 0 : 1
+                opacity: isAudioLoading ? 0 : 1,
+                overflow: "hidden",
               }}
             > <ImageGallery showNav={false} showPlayButton={false} showBullets={true} items={searchedImages} onErrorImageURL="https://images.unsplash.com/photo-1453227588063-bb302b62f50b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
 
