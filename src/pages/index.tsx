@@ -69,7 +69,7 @@ export default function Home() {
         <SearchBar searchHandler={searchHandler} />
       </div>
       <div ref={galleryRef} id="gallery" className="gallery" style={{ height: "100vh", width: "100vw", display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <div style={{ width: "95vw", borderRadius: "10px", overflow: "clip", margin: "25vw" }}>
+        <div style={{ width: "95vw", borderRadius: "10px", margin: "25vw" }}>
           {isAudioLoading ?
             <div style={{ display: "flex", justifyContent: "center" }}>
               <LoadingPlaceHolder />
@@ -79,7 +79,8 @@ export default function Home() {
               style={{
                 transition: "opacity 0.5s ease-in-out",
                 opacity: isAudioLoading ? 0 : 1,
-                overflow: "hidden",
+                marginBottom: "10vh",
+                marginTop: "10vh"
               }}
             > <ImageGallery showNav={false} showPlayButton={false} showBullets={true} items={searchedImages} onErrorImageURL="https://images.unsplash.com/photo-1453227588063-bb302b62f50b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
 
